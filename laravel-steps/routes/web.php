@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -60,4 +61,15 @@ Route::get('request', function (Request $request ){
         dd($r);
         return 'x';
 });
+
+/*  lincando com o CONTROLLER
+    precisa passa um array para a rota
+
+    todos os metodos pegos pela função aqui nas rotas funcionam dentro do controller
+    tanto como o request tambem como o bind
+
+    bind = que sao comandos feitos aqui que refletem em comandos no banco de dados e mostram os resultados 
+*/
+    Route::get('usercontroller/{id}' ,  [ UserController::class , 'show' ] );
+
 
