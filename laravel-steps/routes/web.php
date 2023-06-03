@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -71,5 +72,9 @@ Route::get('request', function (Request $request ){
     bind = que sao comandos feitos aqui que refletem em comandos no banco de dados e mostram os resultados 
 */
     Route::get('usercontroller/{id}' ,  [ UserController::class , 'show' ] );
+
+
+    Route::get( '/pessoacontroller', [PessoaController::class , 'renderizar']   );
+
 
 
