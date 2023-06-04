@@ -1,11 +1,11 @@
 
 @extends('layouts.default')
-@section('content')
+
 
 @push('styles') 
     <link rel="stylesheet" href=" {{ asset('css/style.css') }}  ">
 @endpush
-
+@section('content')
 <main>
     <h2>  fazendo template com Blade </h2>
     <p> {{  $nome  }}  {{ $sobrenome }} </p>
