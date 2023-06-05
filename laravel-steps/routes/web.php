@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Animal;
 use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -75,6 +76,12 @@ Route::get('request', function (Request $request ){
 
 
     Route::get( '/pessoacontroller', [PessoaController::class , 'renderizar']   );
+
+    /* criando rota Animal para testes de conceitos gerais do sistema, fazendo o processo
+        do zero
+    */
+
+    Route::get( 'animal' , [ Animal::class , 'index' ] );
 
 
 
