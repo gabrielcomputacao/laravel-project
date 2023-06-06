@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Animal;
+use App\Models\Dono;
 use App\Models\Pessoa;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Database\Seeder;
@@ -17,7 +18,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         /* Pessoa::factory(10)->create(); */
-        Animal::factory(3)->create();
+        /* Animal::factory(3)->create(); */
+
+        Dono::factory(5)->create();
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

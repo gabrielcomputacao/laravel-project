@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Animal extends Model
 {
 
-    public $patas;
-    public string $nome;
-    private $especie;
+    protected $fillable = [ "patas" , "nome", "especie"  ];
 
     /* fala para o laravel qual tabela sera inserido esse model */
     protected $table = 'animal' ;
